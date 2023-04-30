@@ -1,0 +1,11 @@
+GET http://localhost:3003/products
+
+
+###
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name": "Produto 1",
+    "photo": "https://picsum.photos/200/200?a=1"
+}
