@@ -1,5 +1,11 @@
 GET http://localhost:3003/products
 
+###
+GET http://localhost:3003/cart
+
+###
+
+DELETE http://localhost:3003/cart/f65fec9c-4d16-4edc-85b4-868c913cfb95
 
 ###
 POST http://localhost:3003/products

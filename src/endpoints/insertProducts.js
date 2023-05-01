@@ -3,30 +3,30 @@ const uuid = require('uuid')
 
 
 
-const insertProducts = async(req, res)=>{
+const insertProductsInCart = async(req, res)=>{
     var statusCode = 400
     try{
 
-        const { name, photo } = req.body
+        const { name, price, photo } = req.body
 
-        if(!name || !photo){
+        if(!name || !price || !photo){
             statusCode = 401
             throw new Error('Preencha os campos')
         }
 
 
-        await con('products_Ecommerce').insert({
+        await con('ecommerce_products').insert({
             id: uuid.v4(),
             name,
-            price: Math.floor(Math.random() * 1000),
+            price,
             photo
         })
 
 
-        res.status(200).send('Product inserted successfully')
+        res.status(200).send('Produto adicionado')
     }catch(e){
         res.status(statusCode).send(e.message || e.sqlMessage)
     }
 }
 
-module.exports = insertProducts
+module.exports = insertProductsInCart
