@@ -1,3 +1,3 @@
 # e-commerce-server
 
-API para banco de dados dos produtos do e-commerce que está nesta mesma lista de repositórios.
+API para banco de dados de lista de produtos do projeto de loja virtual E-commerce.
